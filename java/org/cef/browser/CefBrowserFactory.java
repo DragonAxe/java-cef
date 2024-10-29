@@ -17,4 +17,9 @@ public class CefBrowserFactory {
             return new CefBrowserOsr(client, url, isTransparent, context, settings);
         return new CefBrowserWr(client, url, context, settings);
     }
+
+    public static CefBrowser createGLJPanel(CefClient client, String url, boolean isTransparent,
+            CefRequestContext context, CefBrowserSettings settings) {
+        return new CefBrowserGLJPanel(client, url, isTransparent, context, settings);
+    }
 }
